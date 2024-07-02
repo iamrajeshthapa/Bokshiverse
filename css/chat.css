@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    user-select: none;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: black ;
+    color: white;
+}
+.container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1px solid white;
+    padding-bottom: 10px;
+}
+.nav .left{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.nav .left a{
+    color: white;
+    font-size: 20px;
+}
+.nav .left .profilePicture{
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.profilePicture img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.name{
+    font-size: 13px;
+    font-weight: bolder;
+}
+.status{
+    font-weight: 200;
+    font-size: 13px;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 10px;
+}
+.right a{
+    color: white;
+    font-size: 20px;
+}
+.chatArea{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 76%;
+    overflow-y: scroll;
+}
+.incommingMessage{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+}
+.incommingMessage .message{
+    border: 0.1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    max-width: 250px;
+}
+.profilePicture{
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.outgoingMessage{
+    display: flex;
+    margin-left: auto;
+}
+.outgoingMessage .message{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    max-width: 250px;
+}
+.messageInputWrapper{
+    position: fixed;
+    top: 88%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+.messageInputWrapper input{
+    height: 50px;
+    border: 0.1px solid rgb(200, 200, 200);
+    background-color: transparent;
+    width: 60%;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.messageInputWrapper input::placeholder{
+    color: rgb(200, 200, 200);
+}
+.messageInputWrapper i{
+    font-size: 20px;
+}

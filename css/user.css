@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    user-select: none;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: black ;
+    color: white;
+}
+.container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .link{
+    display: flex;
+    gap: 10px;
+}
+.nav .link a{
+    color: white;
+    font-size: 20px;
+}
+.logo{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.search input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: 0.1px solid rgb(200, 200, 200);
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+    color: white;
+}
+.search input::placeholder{
+    color: rgb(200, 200, 200);
+}
+.userList{
+    height: 70%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+.user{
+    display: flex;
+    border-radius: 3px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1px solid white;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+.user .left{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.user .left .profilePicture{
+    border: 1px solid white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.profilePicture img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.name{
+    font-weight: bolder;
+}
+.messageSnippet{
+    font-weight: 200;
+    font-size: 14px;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.footer{
+    position: fixed;
+    top: 90%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+}
+.footer .link{
+    display: flex;
+    justify-content: space-between;
+}
+.footer .link a{
+    color: white;
+    font-size: 20px;
+}
