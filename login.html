@@ -19,8 +19,10 @@
         <div class="error">This is error message</div>
         <form action="">
             <input type="text" placeholder="User Name - ex. @lordRajesh">
-            <input type="password" placeholder="Password">
-            <input type="file"  hidden>
+            <div class="eyeWrapper">
+                <input type="password" placeholder="Password" name="password" id="password" required>
+                <i class="fa-solid fa-eye" id="eye"></i>
+            </div>
             <input type="submit" value="LOGIN">
         </form>
         <div class="forgotPassword">Forgot password ?</div>
@@ -30,6 +32,7 @@
         </div>
 
     </div>
+    <script src="./js/passwordToggle.js"></script>
 </body>
 
 </html>

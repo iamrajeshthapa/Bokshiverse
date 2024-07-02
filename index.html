@@ -17,28 +17,31 @@
             <div class="request">Please register your account to continue !</div>
         </div>
         <div class="error">This is error message</div>
-        <form action="">
+        <form action="#" enctype="multipart/form-data">
             <div class="name">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="First Name" name="firstName" required>
+                <input type="text" placeholder="Last Name" name="lastName" required>
             </div>
-            <input type="text" placeholder="User Name - ex. @lordRajesh">
-            <input type="password" placeholder="Password">
+            <input type="text" placeholder="User Name - ex. @lordRajesh" name="userName" required>
+            <div class="eyeWrapper">
+                <input type="password" placeholder="Password" name="password" id="password" required>
+                <i class="fa-solid fa-eye" id="eye"></i>
+            </div>
             <div class="profilePicture">
                 <div>
                     <i class="fa-solid fa-folder-open"></i>
                 </div>
                 <div class="folderClick">Choose your Profile picture</div>
             </div>
-            <input type="file"  hidden>
-            <input type="submit" value="REGISTER">
+            <input type="file" name="profilePicture" id="profilePictureInput"  hidden>
+            <input type="submit" value="REGISTER" id="submit">
         </form>
         <div class="oldUser">
             <p>Already have Account ?</p>
-            <a href="">Login now</a>
+            <a href="login.html">Login now</a>
         </div>
-
     </div>
+    <script src="./js/passwordToggle.js"></script>
+    <script src="./js/register.js"></script>
 </body>
-
 </html>

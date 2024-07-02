@@ -85,9 +85,6 @@ input[type=submit]:hover{
 .folderClick{
     text-decoration: underline;
 }
-.folderClick:hover{
-    text-decoration: none;
-}
 .oldUser{
     display: flex;
     justify-content: center;
@@ -102,4 +99,13 @@ input[type=submit]:hover{
     justify-content: center;
     color: red;
     text-decoration: underline;
+}
+.eyeWrapper{
+    position: relative;
+}
+.eyeWrapper #eye{
+    position: absolute;
+    transform: translate(-100%, -100%);
+    top: 64%;
+    left: 95%;
 }
