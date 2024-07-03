@@ -51,10 +51,10 @@
                             }
                         }
                     }else{
-                        echo "Please and image file - png, jpeg, jpg !";
+                        echo "Please select image file - png, jpeg, jpg !";
                     }
                 }else{
-                    echo "Please select and profile picture !";
+                    echo "Please select profile picture !";
                 }
             }
         }else{

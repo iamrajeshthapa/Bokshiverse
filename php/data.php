@@ -8,7 +8,7 @@
                 </div>
                 <div class="userDetail">
                     <div class="name">'. $row['firstName'] . " " . $row['lastName'] .'</div>
-                    <div class="messageSnippet">Yo! whatsup</div>
+                    <div class="messageSnippet">You are now connected.</div>
                 </div>
             </div>
             <div class="right">

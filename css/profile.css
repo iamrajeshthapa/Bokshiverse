@@ -45,16 +45,16 @@ body{
     flex-direction: column;
     gap: 10px;
 }
-.profilePicture{
+.userInfo .profilePicture{
     height: 100px;
     width: 100px;
     border-radius: 10%;
     border: 0.1px solid white;
 }
-.profilePicture img{
+.userInfo .profilePicture img{
     width: 100%;
-    width: 100%;
-    border-radius: 50%;
+    height: 100%;
+    border-radius: 10%;
     object-fit: cover;
 }
 .userInfo .name{
@@ -113,7 +113,7 @@ body{
     width: 60px;
     border-radius: 50%;
 }
-.profilePicture img{
+.post .nav .profilePicture img{
     height: 100%;
     width: 100%;
     border-radius: 100%;
