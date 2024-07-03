@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['unique_id'])){
+        header("location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,16 +52,16 @@
                 <a href=""><i class="fa-solid fa-envelope"></i>Contact Us</a>
             </div>
             <div>
-                <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                <a href="php/logout.php?<?php echo $_SESSION['unique_id']?>"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
             </div>
         </div>
         <div class="footer">
             <div class="link">
-                <a href="home.html"><i class="fa-solid fa-house"></i></a>
-                <a href="user.html"><i class="fa-solid fa-message"></i></a>
+                <a href="home.php"><i class="fa-solid fa-house"></i></a>
+                <a href="user.php"><i class="fa-solid fa-message"></i></a>
                 <a href=""><i class="fa-solid fa-plus"></i></a>
-                <a href="profile.html"><i class="fa-solid fa-user"></i></a>
-                <a href="setting.html" style="color: greenyellow;"><i class="fa-solid fa-gear"></i></a>
+                <a href="profile.php"><i class="fa-solid fa-user"></i></a>
+                <a href="setting.php" style="color: greenyellow;"><i class="fa-solid fa-gear"></i></a>
             </div>
         </div>
     </div>

@@ -78,17 +78,17 @@ body{
     padding-right: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     height: 76%;
     overflow-y: scroll;
 }
-.incommingMessage{
+.incomingMessage{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     gap: 10px;
 }
-.incommingMessage .message{
+.incomingMessage .message{
     border: 0.1px solid white;
     padding: 10px;
     border-radius: 10px;
@@ -122,17 +122,25 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
 }
 .messageInputWrapper input{
+    outline: none;
     height: 50px;
     border: 0.1px solid rgb(200, 200, 200);
     background-color: transparent;
-    width: 60%;
+    width: 100%;
     border-radius: 10px;
     padding: 10px;
     color: white;
     font-family: "Poppins", sans-serif;
+}
+.messageInputWrapper button{
+    border: none;
+    padding: 10px;
+    width: 20%;
+    border-radius: 5px;
+    height: 100%;
 }
 .messageInputWrapper input::placeholder{
     color: rgb(200, 200, 200);

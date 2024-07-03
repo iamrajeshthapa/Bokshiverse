@@ -1,12 +1,6 @@
 let form = document.querySelector("form");
 let submit = document.querySelector("#submit");
-let folderClick = document.querySelector(".folderClick");
-let profilePictureInput = document.querySelector("#profilePictureInput");
 let error = document.querySelector(".error");
-
-folderClick.onclick = ()=>{
-    profilePictureInput.click();
-}
 
 form.onsubmit = (e)=>{
     e.preventDefault();
@@ -14,7 +8,7 @@ form.onsubmit = (e)=>{
 
 submit.onclick = ()=>{
     let xhr = new XMLHttpRequest;
-    xhr.open("POST", "php/register.php", true);
+    xhr.open("POST", "php/login.php", true);
     xhr.onload = ()=>{
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){

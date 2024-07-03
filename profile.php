@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['unique_id'])){
+        header("location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,11 +178,11 @@
         </div>
         <div class="footer">
             <div class="link">
-                <a href="home.html"><i class="fa-solid fa-house"></i></a>
-                <a href="user.html"><i class="fa-solid fa-message"></i></a>
+                <a href="home.php"><i class="fa-solid fa-house"></i></a>
+                <a href="user.php"><i class="fa-solid fa-message"></i></a>
                 <a href=""><i class="fa-solid fa-plus"></i></a>
-                <a href="profile.html" style="color: greenyellow;"><i class="fa-solid fa-user"></i></a>
-                <a href="setting.html"><i class="fa-solid fa-gear"></i></a>
+                <a href="profile.php" style="color: greenyellow;"><i class="fa-solid fa-user"></i></a>
+                <a href="setting.php"><i class="fa-solid fa-gear"></i></a>
             </div>
         </div>
     </div>

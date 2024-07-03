@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    user-select: none;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: black ;
+    color: white;
+}
+.container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 25px;
+    font-weight: bolder;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form textarea{
+    min-height: 150px;
+    border: 0.1px solid rgb(200, 200, 200);
+    background-color: transparent;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+form textarea::placeholder{
+    color: white;
+}
+form button{
+    height: 50px;
+    border: 0.1px solid rgb(200, 200, 200);
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+form .add{
+    display: flex;
+    flex-direction: column;
+}
+form .add a{
+    color: white;
+    text-decoration: none;
+}
+form .add a i{
+    padding-right: 6px;
+}

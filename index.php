@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_SESSION['unique_id'])){
+        header("location: home.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +22,7 @@
             <div class="greeting">Hi, Welcome to Bokshiverse</div>
             <div class="request">Please register your account to continue !</div>
         </div>
-        <div class="error">This is error message</div>
+        <div class="error"></div>
         <form action="#" enctype="multipart/form-data">
             <div class="name">
                 <input type="text" placeholder="First Name" name="firstName" required>
@@ -27,18 +33,18 @@
                 <input type="password" placeholder="Password" name="password" id="password" required>
                 <i class="fa-solid fa-eye" id="eye"></i>
             </div>
+            <input type="file" name="profilePicture" id="profilePictureInput" hidden>
             <div class="profilePicture">
                 <div>
                     <i class="fa-solid fa-folder-open"></i>
                 </div>
                 <div class="folderClick">Choose your Profile picture</div>
             </div>
-            <input type="file" name="profilePicture" id="profilePictureInput"  hidden>
             <input type="submit" value="REGISTER" id="submit">
         </form>
         <div class="oldUser">
             <p>Already have Account ?</p>
-            <a href="login.html">Login now</a>
+            <a href="login.php">Login now</a>
         </div>
     </div>
     <script src="./js/passwordToggle.js"></script>

@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_SESSION['unique_id'])){
+        header("location: home.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,23 +22,24 @@
             <div class="greeting">Hi, Welcome back to Bokshiverse</div>
             <div class="request">Please login your account to continue !</div>
         </div>
-        <div class="error">This is error message</div>
-        <form action="">
-            <input type="text" placeholder="User Name - ex. @lordRajesh">
+        <div class="error"></div>
+        <form action="#">
+            <input type="text" placeholder="User Name - ex. @lordRajesh" name="userName" required>
             <div class="eyeWrapper">
                 <input type="password" placeholder="Password" name="password" id="password" required>
                 <i class="fa-solid fa-eye" id="eye"></i>
             </div>
-            <input type="submit" value="LOGIN">
+            <input type="submit" value="LOGIN" id="submit">
         </form>
         <div class="forgotPassword">Forgot password ?</div>
         <div class="oldUser">
             <p>Don't have account ?</p>
-            <a href="index.html">Register now</a>
+            <a href="index.php">Register now</a>
         </div>
 
     </div>
     <script src="./js/passwordToggle.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
