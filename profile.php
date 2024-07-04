@@ -37,7 +37,7 @@ if (!isset($_SESSION['unique_id'])) {
                 </div>
                 <div>
                     <div class="name"><?php echo $row['firstName'] . " " . $row['lastName']; ?></div>
-                    <div class="userName"><?php echo $row['userName'] ?></div>
+                    <div class="userName"><?php echo $row['userName']; ?></div>
                 </div>
                 <div class="follow">
                     <div class="follower"><span>69k</span> follower</div>
