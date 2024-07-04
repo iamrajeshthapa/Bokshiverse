@@ -51,6 +51,7 @@ if (!isset($_SESSION['unique_id'])) {
                     do{
                         echo '<div class="post">
                         <div class="nav">
+                        <a href="profile.php?user_id='. $row['unique_id'] .'" style="color: white; text-decoration: none;">
                             <div class="left">
                                 <div class="profilePicture">
                                     <img src="./asset/image/profile/'. $row['profilePicture'] .'"
@@ -61,6 +62,7 @@ if (!isset($_SESSION['unique_id'])) {
                                     <div class="userName">'. $row['userName'] .'</div>
                                 </div>
                             </div>
+                        </a>
                             <div class="right">
                                 <div class="time">5h</div>
                                 <div class="more">

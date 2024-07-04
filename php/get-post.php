@@ -10,15 +10,17 @@
         while($row = mysqli_fetch_assoc($sql)){
             $output .= '<div class="post">
                 <div class="nav">
+                <a href="profile.php?user_id='. $row['unique_id'] .'" style="color: white; text-decoration: none;">
                     <div class="left">
                         <div class="profilePicture">
                             <img src="./asset/image/profile/'. $row['profilePicture'] .'" alt="">
                         </div>
                         <div class="userDetail">
-                            <a href="profile.php?user_id='. $row['unique_id'] .'>" style="color: white; text-decoration: none;"><div class="name">'. $row['firstName'] . " " . $row['lastName'] .'</div></a>
+                            <div class="name">'. $row['firstName'] . " " . $row['lastName'] .'</div>
                             <div class="userName">'. $row['userName'] .'</div>
                         </div>
                     </div>
+                </a>
                     <div class="right">
                         <div class="time">5h</div>
                         <div class="more">
@@ -28,9 +30,9 @@
                 </div>
                 <div class="content">'. $row['content'] .'</div>
                 <div class="interaction">
-                    <i class="fa-regular fa-thumbs-up"></i>
-                    <i class="fa-regular fa-comment"></i>
-                    <i class="fa-solid fa-share"></i>
+                    <div><i class="fa-regular fa-thumbs-up"></i> 0</div>
+                    <div><i class="fa-regular fa-thumbs-down"></i> 0</div>
+                    <div><i class="fa-regular fa-comment"></i> 0</div>
                 </div>
             </div>';
         }

@@ -24,13 +24,15 @@
         <div class="nav">
             <div class="left">
                 <a href="user.php"><i class="fa-solid fa-delete-left"></i></a>
+                <a href="profile.php?user_id='. $row['unique_id'] .'" style="color: white; text-decoration: none; display: flex; flex-direction: row; align-items: center; gap:10px">
                 <div class="profilePicture">
                     <img src="./asset/image/profile/<?php echo $row['profilePicture']; ?>" alt="">
                 </div>
                 <div class="userDetail">
-                    <a href="profile.php?user_id=<?php echo $user_id; ?>" style="color: white; text-decoration: none;"><div class="name"><?php echo $row['firstName'] . " " . $row['lastName']; ?></div></a>
+                    <div class="name"><?php echo $row['firstName'] . " " . $row['lastName']; ?></div>
                     <div class="status"><?php echo $row['status']; ?></div>
                 </div>
+                </a>
             </div>
             <div class="right">
                 <a href=""><i class="fa-solid fa-phone"></i></a>
