@@ -1,6 +1,11 @@
 let feed = document.querySelector(".feed");
 
-setInterval(()=>{
+window.onbeforeunload = (e)=>{
+    
+    alert("abc");
+}
+
+(()=>{
     let xhr = new XMLHttpRequest;
     xhr.open("GET", "php/get-post.php", true);
     xhr.onload = ()=>{
@@ -12,4 +17,5 @@ setInterval(()=>{
         }
     }
     xhr.send();
-}, 500);
+})()
+

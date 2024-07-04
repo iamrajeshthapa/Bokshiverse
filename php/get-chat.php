@@ -21,7 +21,7 @@
                 }else{
                     $output .= '<div class="incomingMessage">
                                   <div class="profilePicture">
-                                    <img src="asset/image/profile/'. $row['profilePicture'] .'" alt="">
+                                    <img src="asset/profile/image/'. $row['profilePicture'] .'" alt="">
                                   </div>
                                   <div class="message">'. $row['msg'] .'</div>
                                 </div>';

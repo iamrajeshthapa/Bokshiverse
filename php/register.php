@@ -28,13 +28,13 @@
 
                         $new_img_name = $time.$img_name;
 
-                        if(move_uploaded_file($temp_name, "../asset/image/profile/".$new_img_name)){
+                        if(move_uploaded_file($temp_name, "../asset/profile/image/".$new_img_name)){
                             $status = "Active now";
 
                             $random_id = rand(time(), 10000000);
 
-                            $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, firstName, lastName, userName, password, profilePicture, status)
-                            VALUES({$random_id}, '{$firstName}', '{$lastName}', '{$userName}', '{$password}', '{$new_img_name}', '{$status}')");
+                            $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, firstName, lastName, userName, password, profilePicture, status, verification_status)
+                            VALUES({$random_id}, '{$firstName}', '{$lastName}', '{$userName}', '{$password}', '{$new_img_name}', '{$status}', 'unverified')");
 
                             if($sql2){
                                 $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE userName = '{$userName}'");

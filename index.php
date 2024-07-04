@@ -36,7 +36,7 @@
             <input type="file" name="profilePicture" id="profilePictureInput" hidden>
             <div class="profilePicture">
                 <div>
-                    <i class="fa-solid fa-folder-open"></i>
+                    <i class="fa-solid fa-folder"></i>
                 </div>
                 <div class="folderClick">Choose your Profile picture</div>
             </div>

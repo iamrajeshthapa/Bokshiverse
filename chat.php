@@ -7,6 +7,7 @@
     <title>Bokshiverse - Chat</title>
     <link rel="stylesheet" href="./css/chat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 </head>
 
 <body>
@@ -25,13 +26,16 @@
             <div class="left">
                 <a href="user.php"><i class="fa-solid fa-delete-left"></i></a>
                 <a href="profile.php?user_id=<?php echo $user_id; ?>" style="color: white; text-decoration: none; display: flex; flex-direction: row; align-items: center; gap:10px">
-                <div class="profilePicture">
-                    <img src="./asset/image/profile/<?php echo $row['profilePicture']; ?>" alt="">
-                </div>
-                <div class="userDetail">
-                    <div class="name"><?php echo $row['firstName'] . " " . $row['lastName']; ?></div>
-                    <div class="status"><?php echo $row['status']; ?></div>
-                </div>
+                    <div class="profilePicture">
+                        <img src="./asset/profile/image/<?php echo $row['profilePicture']; ?>" alt="">
+                    </div>
+                    <div class="userDetail">
+                        <div id="name">
+                            <div class="name"><?php echo $row['firstName'] . " " . $row['lastName'] ?></div>
+                            <i class="fi fi-sr-shield-trust" id="<?php echo $row['verification_status']; ?>"></i>
+                        </div>
+                        <div class="status"><?php echo $row['status']; ?></div>
+                    </div>
                 </a>
             </div>
             <div class="right">
@@ -43,8 +47,8 @@
             <!--API is called here-->
         </div>
         <form action="#" class="messageInputWrapper" autocomplete="off">
-        <i class="fa-solid fa-microphone"></i>
-        <i class="fa-solid fa-image"></i>
+            <i class="fa-solid fa-microphone"></i>
+            <i class="fa-solid fa-image"></i>
             <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
             <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
             <input type="text" name="message" placeholder="Enter your message here" id="message">

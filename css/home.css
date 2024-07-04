@@ -54,7 +54,7 @@ body{
     display: flex;
     gap: 15px;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .post .nav{
     display: flex;
@@ -80,6 +80,17 @@ body{
 .post .nav .name{
     font-weight: bolder;
 }
+#name{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+}
+#name i{
+    display: flex;
+    align-items: center;
+    color: #1877F2;
+}
 .post .nav .userName{
     font-weight: 200;
     font-size: 15px;
@@ -89,9 +100,26 @@ body{
     flex-direction: row;
     gap: 20px;
 }
-.content{
-    max-height: 150px;
-    overflow-y: scroll;
+.postVideo{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.postVideo video{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.postPicture{
+    width: 100%;
+    border-radius: 20px;
+}
+.postPicture img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
 }
 .interaction{
     width: fit-content;
@@ -115,4 +143,10 @@ body{
 .footer .link a{
     color: white;
     font-size: 20px;
+}
+#NULL{
+    display: none !important;
+}
+#unverified{
+    display: none !important;
 }

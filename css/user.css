@@ -58,9 +58,11 @@ body{
     border-radius: 10px;
     color: white;
     outline: none;
+    font-size: 15px;
 }
 .search input::placeholder{
     color: rgb(200, 200, 200);
+    font-size: 15px;
 }
 .userList{
     height: 70%;
@@ -103,6 +105,17 @@ body{
 .name{
     font-weight: bolder;
 }
+#name{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+}
+#name i{
+    display: flex;
+    align-items: center;
+    color: #1877F2;
+}
 .messageSnippet{
     font-weight: 200;
     font-size: 14px;
@@ -127,4 +140,10 @@ body{
 .footer .link a{
     color: white;
     font-size: 20px;
+}
+#unverified{
+    display: none !important;
+}
+.Active{
+    color: greenyellow;
 }
