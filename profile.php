@@ -43,7 +43,7 @@ if (!isset($_SESSION['unique_id'])) {
                             <i class="fi fi-sr-shield-trust" id="<?php echo $row['verification_status']; ?>"></i>
                         </div>
                         <?php
-                        if($_SESSION['unique_id'] !== $user_id){
+                        if ($_SESSION['unique_id'] !== $user_id) {
                             echo "<div class=\"follow\">Follow</div>";
                         }
                         ?>
@@ -114,6 +114,26 @@ if (!isset($_SESSION['unique_id'])) {
             </div>
         </div>
     </div>
+    <script>
+        // Get all <video> elements.
+        const videos = document.querySelectorAll('video');
+
+        // Pause all <video> elements except for the one that started playing.
+        function pauseOtherVideos({
+            target
+        }) {
+            for (const video of videos) {
+                if (video !== target) {
+                    video.pause();
+                }
+            }
+        }
+
+        // Listen for the 'play' event on all the <video> elements.
+        for (const video of videos) {
+            video.addEventListener('play', pauseOtherVideos);
+        }
+    </script>
 </body>
 
 </html>

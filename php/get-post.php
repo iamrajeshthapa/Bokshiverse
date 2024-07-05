@@ -36,7 +36,7 @@
                     <img src="asset/post/image/'. $row['post_picture'] .'" />
                 </div>
                 <div class="postVideo" id="'. $row['post_video'] .'">
-                    <video controls loop>
+                    <video controls>
                       <source src="asset/post/video/'. $row['post_video'] .'" type="video/mp4">
                     </video>
                 </div>
