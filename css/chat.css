@@ -84,7 +84,7 @@ body{
     color: white;
     font-size: 20px;
 }
-.chatArea{
+.messageArea{
     padding-left: 10px;
     padding-right: 10px;
     display: flex;

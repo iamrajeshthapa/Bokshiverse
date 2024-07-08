@@ -20,7 +20,7 @@ if (!isset($_SESSION['unique_id'])) {
 <body>
     <div class="container">
         <div class="nav">
-            <div class="logo">CHAT</div>
+            <div class="logo">Message</div>
         </div>
         <div class="search">
             <input type="text" placeholder="Enter the name of the user" id="search">

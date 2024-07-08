@@ -1,6 +1,6 @@
 <?php
     while($row = mysqli_fetch_assoc($sql)){
-        $output .= '<a href="chat.php?user_id='. $row['unique_id'] .'">
+        $output .= '<a href="message.php?user_id='. $row['unique_id'] .'">
         <div class="user">
             <div class="left">
                 <div class="profilePicture">
